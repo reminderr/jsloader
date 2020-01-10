@@ -72,7 +72,7 @@ class jsloader {
 	preload(className, classProto, classes, fn) {
 		let _class = {}
 		if(this.include.has(className)) {
-    		_class = this.include.get(className)
+    			_class = this.include.get(className)
 		} else {
 			jsloader.define(_class, 'name', className)
 		}
