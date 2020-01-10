@@ -28,9 +28,9 @@ _x.preload('company', 'projects', ['js/user', 'js/tasks'], run => {
 
 })
 
-_x.preload('company', 'addresses', ['js/user'], run => { 
+_x.preload('company', 'addresses', ['js/tasks'], run => { 
 
-	return class addresses extends run.user {
+	return class addresses extends run.tasks {
 
 		constructor() {
 
@@ -39,7 +39,7 @@ _x.preload('company', 'addresses', ['js/user'], run => {
 
             		//set your properties or whatever
             		//static userList method from user class
-			this.employers = run.user.userList
+			this.employers = run.tasks.taskList
 
 		}
 		
