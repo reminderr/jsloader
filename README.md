@@ -3,9 +3,12 @@ es-loader
 Javascript asynchronous loader
 The loader is made as simplier as possible. The logic follows few rules that cannot be omitted in order to get maximum performance.
 It consist in definition into script tag attributes of the global variable with which the loader class is instantiated, and the relative path to the first class to load.
+
 Note that the class has to be named the same as filename.
 
 <script src="src/loader.js" instance="your_global_variable" load="path_to/your_file_class_name"></script>
+
+
 
 There are three primary methods which are used.
 The first is loader setter method, that is mandatory, for including class into loader and it must be called in every file after the class definition.
