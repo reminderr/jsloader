@@ -20,9 +20,9 @@ _x.preload('company', 'projects', ['js/user', 'js/tasks'], run => {
 			//static taskData method from tasks class
 			this.projectList = run.tasks.taskData(user.userName)
 
-			//proceed with class methods or whatever
-
 		}
+		
+		//proceed with class methods or whatever
 
 	}
 
@@ -41,9 +41,9 @@ _x.preload('company', 'addresses', ['js/user'], run => {
             		//static userList method from user class
 			this.employers = run.user.userList
 
-			//proceed with class methods or whatever
-
 		}
+		
+		//proceed with class methods or whatever
 
 	}
 
