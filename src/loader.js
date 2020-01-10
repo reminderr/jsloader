@@ -100,7 +100,7 @@ class jsloader {
 						loadCls(classPaths)
 					} else {
 						let script = document.createElement('SCRIPT')
-						script.setAttribute('src', '../'+clsName+'.js')
+						script.setAttribute('src', clsName+'.js')
 						script.onload = e => {
 							collection[cls] = this.include.get(cls)
 							classPaths.length == 0 && resolve(collection)
