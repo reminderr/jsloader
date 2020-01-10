@@ -8,7 +8,7 @@ Note that the class has to be named the same as filename.
 
 <script src="src/loader.js" instance="your_global_variable" load="path_to/your_file_class_name"></script>
 
-<br><br>
+<br>
 
 There are three primary methods which are used.
 The first is loader setter method, that is mandatory, for including class into loader and it must be called in every file after the class definition.
