@@ -1,4 +1,4 @@
-<strong>jsloader</strong>
+<h2>jsloader</h2>
 
 Javascript asynchronous loader
 The loader is made as simplier as possible. The logic follows few rules that cannot be omitted in order to get maximum performance.
@@ -7,9 +7,7 @@ It consist in definition into script tag attributes of the global variable with 
 Note that the class has to be named the same as filename.
 
 <script src="src/loader.js" instance="your_global_variable" load="path_to/your_file_class_name"></script>
-
-<br>
-
+<br><br>
 There are three primary methods which are used.
 The first is loader setter method, that is mandatory, for including class into loader and it must be called in every file after the class definition.
 
