@@ -28,7 +28,7 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
-class loader {
+class jsloader {
 	
 	/**
 	 * @description Class constructor
@@ -39,7 +39,7 @@ class loader {
 		window.onload = e => {
 			let classPath = document.querySelector('[load]').getAttribute('load')
 			this.load([classPath]).then(run => {
-				new run[loader.getClassName(classPath)]
+				new run[jsloader.getClassName(classPath)]
 			})
 		}
 	}
@@ -74,9 +74,9 @@ class loader {
 		if(this.include.has(className)) {
     		_class = this.include.get(className)
 		} else {
-			loader.define(_class, 'name', className)
+			jsloader.define(_class, 'name', className)
 		}
-		loader.define(_class, classProto, () => {
+		jsloader.define(_class, classProto, () => {
 			return this.load(classes).then(fn)
 		})
 		this.include = _class
@@ -93,7 +93,7 @@ class loader {
 			let loadCls = classPaths => {
 				if(classPaths.length) {
 					let clsName = classPaths.shift() 
-					let cls = loader.getClassName(clsName)
+					let cls = jsloader.getClassName(clsName)
 					if(this.include.has(cls)) {
 						collection[cls] = this.include.get(cls)
 						classPaths.length == 0 && resolve(collection)
@@ -139,7 +139,7 @@ class loader {
 
 }
 
-loader.define(window, document.querySelector('[load]').getAttribute('instance'), new loader)
+jsloader.define(window, document.querySelector('[load]').getAttribute('instance'), new jsloader)
 
 
 
