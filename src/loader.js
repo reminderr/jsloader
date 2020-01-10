@@ -38,15 +38,8 @@ class loader {
 		this._include = new Map
 		window.onload = e => {
 			let classPath = document.querySelector('[load]').getAttribute('load')
-			let lang = document.querySelector('[load]').getAttribute('lang')
-			let polling = document.querySelector('[load]').getAttribute('polling')		
-			let aux = document.querySelector('[load]').getAttribute('aux')
-			let settings = document.querySelector('[load]').getAttribute('settings')
-			let st = document.querySelector('[load]').getAttribute('st')
-			let modules = document.querySelector('[load]').getAttribute('modules')
-			let host = document.querySelector('[load]').getAttribute('dhost')
 			this.load([classPath]).then(run => {
-				new run[loader.getClassName(classPath)](lang, polling, aux, settings, st, modules, host)
+				new run[loader.getClassName(classPath)]
 			})
 		}
 	}
@@ -114,7 +107,7 @@ class loader {
 							loadCls(classPaths)
 						}
 						script.onerror = e => console.log(`Filename ${clsName}.js does not exist!`)
-	        			document.querySelector('HEAD').insertAdjacentElement('beforeend', script)
+	        				document.querySelector('HEAD').insertAdjacentElement('beforeend', script)
 					}
 				}
 			}
