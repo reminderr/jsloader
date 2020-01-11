@@ -32,7 +32,7 @@ _x.preload('company', 'addresses', ['js/tasks'], run => {
 
 	return class addresses extends run.tasks {
 
-		constructor() {
+		constructor() { 
 
 			//we call superclass before accessing 'this' or returning from derived constructor
 			super()
