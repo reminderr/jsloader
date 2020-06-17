@@ -8,7 +8,7 @@ class tasks {
 
 	}
 	
-	static tackList() {
+	static taskList() {
 
 		return new Map([['White', 'Fang'], ['Polar', 'Keesh']])
 
